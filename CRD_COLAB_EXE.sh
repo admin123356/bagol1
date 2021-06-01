@@ -128,20 +128,8 @@ printf "$g$b    Installing VLC Media Player $endc$enda" >&2
 printf "\r$c$b    VLC Media Player Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
-# Install other tools like nano
-sudo apt-get install gdebi -y &> /dev/null
-sudo apt-get install vim -y &> /dev/null
-printf "$g$b    Installing other Tools $endc$enda" >&2
-if sudo apt install nautilus nano -y &> /dev/null
-then
-    printf "\r$c$b    Other Tools Installed $endc$enda\n" >&2
-else
-    printf "\r$r$b    Error Occured $endc$enda\n" >&2
-fi
 
-
-
-printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
+#! /bin/bash
 
 
 #@title Start GUI Colab
