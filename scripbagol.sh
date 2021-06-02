@@ -1,6 +1,3 @@
-pip install git+https://github.com/SwayamJoshi87/remocolab.xrdp.git
-import remocolab
-remocolab.setupVNC()
 apt install xrdp
 service xrdp start
 apt install firefox
