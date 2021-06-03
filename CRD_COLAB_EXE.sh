@@ -1,4 +1,3 @@
-
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
@@ -15,15 +14,13 @@ clear
 # Branding
 
 printf """$c$b
-
-
+ 
 ██████╗░░█████╗░░██████╗░░█████╗░██╗░░░░░  ██╗░░░██╗██████╗░░██████╗
 ██╔══██╗██╔══██╗██╔════╝░██╔══██╗██║░░░░░  ██║░░░██║██╔══██╗██╔════╝
 ██████╦╝███████║██║░░██╗░██║░░██║██║░░░░░  ╚██╗░██╔╝██████╔╝╚█████╗░
 ██╔══██╗██╔══██║██║░░╚██╗██║░░██║██║░░░░░  ░╚████╔╝░██╔═══╝░░╚═══██╗
 ██████╦╝██║░░██║╚██████╔╝╚█████╔╝███████╗  ░░╚██╔╝░░██║░░░░░██████╔╝
 ╚═════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚══════╝  ░░░╚═╝░░░╚═╝░░░░░╚═════╝░
-
 ██╗░░██╗░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░
 ██║░░██║██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░
 ███████║███████║██║░░╚═╝█████═╝░██║██╔██╗██║██║░░██╗░
@@ -66,6 +63,17 @@ else
     printf "\r$r$b    Error Occured $endc$enda\n" >&2
     exit
 fi
+
+# Installing Chrome Remote Desktop
+printf "\n$g$b    Installing Chrome Remote Desktop $endc$enda" >&2
+{
+    wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+    sudo dpkg --install chrome-remote-desktop_current_amd64.deb
+    sudo apt install --assume-yes --fix-broken
+} &> /dev/null &&
+printf "\r$c$b    Chrome Remote Desktop Installed $endc$enda\n" >&2 ||
+{ printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
+
 
 
 # Install Desktop Environment (XFCE4)
@@ -125,6 +133,31 @@ printf "$g$b    Installing VLC Media Player $endc$enda" >&2
 printf "\r$c$b    VLC Media Player Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
+# Install other tools like nano
+sudo apt-get install gdebi -y &> /dev/null
+sudo apt-get install vim -y &> /dev/null
+printf "$g$b    Installing other Tools $endc$enda" >&2
+if sudo apt install nautilus nano -y &> /dev/null
+then
+    printf "\r$c$b    Other Tools Installed $endc$enda\n" >&2
+else
+    printf "\r$r$b    Error Occured $endc$enda\n" >&2
+fi
 
 
 
+printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
+
+
+
+# Adding user to CRP group
+sudo adduser user chrome-remote-desktop
+
+# Finishing Work
+printf '\nVisit http://remotedesktop.google.com/headless and Copy the command after authentication\n'
+read -p "Paste Command: " CRP
+su - user -c """$CRP"""
+
+printf "\n$c$b I hope everthing done correctly if mistakenly wrote wrong command or pin, Rerun the current box or run command 'su - user -c '<CRP Command Here>' $endc$enda\n" >&2
+printf "\n$c$b https://remotedesktop.google.com/access to access your VM, do not close browser tab to keep colab running ' $endc$enda\n" >&2
+printf "\n$g$b Finished Succesfully$endc$enda"
