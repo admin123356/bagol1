@@ -5,8 +5,7 @@ service xrdp start -y
 apt install firefox -y
 apt install pciutils -y
 ./ngrok
-./ngrok authtoken 1roWNX8nBrko2qCswL1vAv1Z44Q_3GXZdV4h3vCniZNpdcSs5
-
+./ngrok authtoken 1tTmF8D4OH3KVj3S66H671zMUAx_4SPjsG2iKr1qJE8QRuHEk
 
 #! /bin/bash
 
