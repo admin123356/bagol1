@@ -1,11 +1,11 @@
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-unzip ngrok-stable-linux-amd64.zip
-apt install xrdp -y
-service xrdp start -y
-apt install firefox -y
-apt install pciutils -y
-./ngrok
-./ngrok authtoken 1tTmF8D4OH3KVj3S66H671zMUAx_4SPjsG2iKr1qJE8QRuHEk
+# wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+# unzip ngrok-stable-linux-amd64.zip
+# apt install xrdp -y
+# service xrdp start -y
+# apt install firefox -y
+# apt install pciutils -y
+# ./ngrok
+# ./ngrok authtoken 1tTmF8D4OH3KVj3S66H671zMUAx_4SPjsG2iKr1qJE8QRuHEk
 
 #! /bin/bash
 
