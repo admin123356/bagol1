@@ -4,7 +4,8 @@ apt install xrdp -y
 service xrdp start -y
 apt install firefox -y
 apt install pciutils -y
-
+./ngrok
+./ngrok authtoken 1roWNX8nBrko2qCswL1vAv1Z44Q_3GXZdV4h3vCniZNpdcSs5
 
 
 #! /bin/bash
@@ -85,9 +86,8 @@ printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
 
-
-
-
+./ngrok
+./ngrok tcp 3389
 
 printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
 
