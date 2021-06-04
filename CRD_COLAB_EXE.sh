@@ -1,11 +1,7 @@
-# wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-# unzip ngrok-stable-linux-amd64.zip
-# apt install xrdp -y
-# service xrdp start -y
-# apt install firefox -y
-# apt install pciutils -y
-# ./ngrok
-# ./ngrok authtoken 1tTmF8D4OH3KVj3S66H671zMUAx_4SPjsG2iKr1qJE8QRuHEk
+! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+! unzip ngrok-stable-linux-amd64.zip
+! ./ngrok
+! ./ngrok authtoken 1tTnxYksd501y7cKzNVsv5uwVUF_2sXgrA2vDBz22yeE4tZoM
 
 #! /bin/bash
 
@@ -85,14 +81,14 @@ printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
 
-./ngrok
-./ngrok tcp 3389
 
 printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
 
 
+! apt install xrdp -y
+! service xrdp start -y
+! apt install firefox -y
+! apt install pciutils -y
+! ./ngrok
+! ./ngrok tcp 3389
 
-
-
-
-./ngrok
