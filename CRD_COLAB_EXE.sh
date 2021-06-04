@@ -1,3 +1,8 @@
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+unzip ngrok-stable-linux-amd64.zip
+
+
+
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
