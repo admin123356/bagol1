@@ -1,5 +1,9 @@
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 unzip ngrok-stable-linux-amd64.zip
+apt install xrdp -y
+service xrdp start -y
+apt install firefox -y
+apt install pciutils -y
 
 
 
@@ -91,6 +95,5 @@ printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
 
 
 
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-unzip ngrok-stable-linux-amd64.zip
+
 ./ngrok
