@@ -1,8 +1,6 @@
 ! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 ! unzip ngrok-stable-linux-amd64.zip
-#! Set your ngrok Authtoken.
-  ngrok_token = getpass.getpass()
-  clear_output()
+
 
 
 #! /bin/bash
@@ -49,6 +47,8 @@ else
   printf "\r$r$b Error Occured $endc$enda\n" >&2
   exit
 fi
+# in ngrok.yml
+authtoken:()
 
 # Add user to sudo group
 sudo adduser user sudo
