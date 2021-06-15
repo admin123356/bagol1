@@ -168,10 +168,14 @@ else
 fi
 
 
-
-printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2 
-
+# JANGAN LUPA subscriber LELED CHANNEL 
+printf "$g$b    Installing xfce4-goodies $endc$enda" >&2
+{
 ! service xrdp start -y
 ! ./ngrok
 ! ./ngrok tcp 3389
+} &> /dev/null &&
+printf "\r$c$b    JANGAN LUPA subscriber LELED CHANNEL $endc$enda\n" >&2 ||
+{ printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
 
+printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2 
