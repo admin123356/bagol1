@@ -148,8 +148,6 @@ fi
 printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2 
 
 ! apt install xfce4-goodies
-! apt install firefox
-! apt install xarchiver
 ! apt install xfce4
 ! apt install xrdp -y
 ! service xrdp start -y
