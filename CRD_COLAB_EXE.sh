@@ -28,8 +28,8 @@ printf """$c$b
 ██║░░██║██║░░██║╚█████╔╝██║░╚██╗██║██║░╚███║╚██████╔╝
 ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
     $r ALFIAN ADI SUKMA $c 
-          
 $endc$enda""";
+
 
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
@@ -145,7 +145,8 @@ fi
 
 
 
-printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
+printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2          
+
 
 
 ! apt install xrdp -y
