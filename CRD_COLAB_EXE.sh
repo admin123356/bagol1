@@ -33,7 +33,8 @@ $endc$enda""";
 
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
- 
+
+# Creation of user
 printf "\n\nCreating user " >&2
 if sudo useradd -m user &> /dev/null
 then
@@ -42,8 +43,6 @@ else
   printf "\r$r$b Error Occured $endc$enda\n" >&2
   exit
 fi
-# in ngrok.yml
-authtoken:()
 
 # Add user to sudo group
 sudo adduser user sudo
@@ -147,13 +146,6 @@ fi
 
 
 printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2
-
-
-
-# Adding user to CRP group
-sudo adduser user chrome-remote-desktop
-
-# Finishing Work
 
 
 ! apt install xrdp -y
