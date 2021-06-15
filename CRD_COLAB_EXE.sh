@@ -2,30 +2,6 @@
 ! unzip ngrok-stable-linux-amd64.zip
 ! ./ngrok
 ! ./ngrok authtoken
-  if gpu_name == None:
-    print("------------------------------")
-
-  print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
-  print("(You need to sign up for ngrok and login,)")
-  #Set your ngrok Authtoken.
-  ngrok_token = getpass.getpass()
-  clear_output()
-
-  if not ngrok_region:
-    print("Select your ngrok region :")
-    print("us - United States (Ohio)")
-    print("eu - Europe (Frankfurt)")
-    print("ap - Asia/Pacific (Singapore)")
-    print("au - Australia (Sydney)")
-    print("sa - South America (Sao Paulo)")
-    print("jp - Japan (Tokyo)")
-    print("in - India (Mumbai)")
-    ngrok_region = region = input()
-    clear_output()
-    apps()
-
-  return (True, _setupSSHDImpl(ngrok_token, ngrok_region, is_VNC))
-
 
 
 
@@ -64,6 +40,29 @@ $endc$enda""";
 
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
+  if gpu_name == None:
+    print("------------------------------")
+
+  print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
+  print("(You need to sign up for ngrok and login,)")
+  #Set your ngrok Authtoken.
+  ngrok_token = getpass.getpass()
+  clear_output()
+
+  if not ngrok_region:
+    print("Select your ngrok region :")
+    print("us - United States (Ohio)")
+    print("eu - Europe (Frankfurt)")
+    print("ap - Asia/Pacific (Singapore)")
+    print("au - Australia (Sydney)")
+    print("sa - South America (Sao Paulo)")
+    print("jp - Japan (Tokyo)")
+    print("in - India (Mumbai)")
+    ngrok_region = region = input()
+    clear_output()
+    apps()
+
+  return (True, _setupSSHDImpl(ngrok_token, ngrok_region, is_VNC))
 
 # Creation of user
 printf "\n\nCreating user " >&2
