@@ -1,7 +1,34 @@
 ! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 ! unzip ngrok-stable-linux-amd64.zip
 ! ./ngrok
-! ./ngrok authtoken 1tz0DjgxN8HDXJwoxPWS1HUyv2L_3G3c3SREQMucEgqWDan5q
+! ./ngrok authtoken
+  if gpu_name == None:
+    print("------------------------------")
+
+  print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
+  print("(You need to sign up for ngrok and login,)")
+  #Set your ngrok Authtoken.
+  ngrok_token = getpass.getpass()
+  clear_output()
+
+  if not ngrok_region:
+    print("Select your ngrok region :")
+    print("us - United States (Ohio)")
+    print("eu - Europe (Frankfurt)")
+    print("ap - Asia/Pacific (Singapore)")
+    print("au - Australia (Sydney)")
+    print("sa - South America (Sao Paulo)")
+    print("jp - Japan (Tokyo)")
+    print("in - India (Mumbai)")
+    ngrok_region = region = input()
+    clear_output()
+    apps()
+
+  return (True, _setupSSHDImpl(ngrok_token, ngrok_region, is_VNC))
+
+
+
+
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
