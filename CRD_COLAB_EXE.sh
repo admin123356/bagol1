@@ -40,10 +40,7 @@ $endc$enda""";
 
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
-  if gpu_name == None:
-    print("------------------------------")
-
-  print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
+  if print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
   print("(You need to sign up for ngrok and login,)")
   #Set your ngrok Authtoken.
   ngrok_token = getpass.getpass()
