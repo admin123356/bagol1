@@ -1,8 +1,11 @@
 ! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 ! unzip ngrok-stable-linux-amd64.zip
 ! ./ngrok
-! ./ngrok authtoken
-
+! ./ngrok authtoken from https://dashboard.ngrok.com/auth")
+  print("(You need to sign up for ngrok and login,)")
+  #Set your ngrok Authtoken.
+  ngrok_token = getpass.getpass()
+  clear_output()
 
 
 #! /bin/bash
