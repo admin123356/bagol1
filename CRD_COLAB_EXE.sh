@@ -132,6 +132,22 @@ printf "$g$b    Installing VLC Media Player $endc$enda" >&2
 printf "\r$c$b    VLC Media Player Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
+# Install xfce4-goodies 
+printf "$g$b    Installing xfce4-goodies $endc$enda" >&2
+{
+    sudo apt install xfce4-goodies -y
+} &> /dev/null &&
+printf "\r$c$b    xfce4-goodies Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
+# Install xfce4
+printf "$g$b    Installing xfce4-goodies $endc$enda" >&2
+{
+    sudo apt install xfce4 -y
+} &> /dev/null &&
+printf "\r$c$b    xfce4 Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
 # Install other tools like nano
 sudo apt-get install gdebi -y &> /dev/null
 sudo apt-get install vim -y &> /dev/null
@@ -147,8 +163,7 @@ fi
 
 printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2 
 
-! apt install xfce4-goodies
-! apt install xfce4
+
 ! apt install xrdp -y
 ! service xrdp start -y
 ! ./ngrok
