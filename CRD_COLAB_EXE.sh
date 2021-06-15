@@ -99,20 +99,47 @@ printf "$g$b    Installing Google Chrome $endc$enda" >&2
 printf "\r$c$b    Google Chrome Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
-# Install xfce4
-printf "$g$b    Installing xfce4-goodies $endc$enda" >&2
+
+
+# Install CrossOver (Run exe on linux)
+printf "$g$b    Installing CrossOver $endc$enda" >&2
 {
-    sudo apt install xfce4 -y
+    wget https://media.codeweavers.com/pub/crossover/cxlinux/demo/crossover_20.0.2-1.deb
+    sudo dpkg -i crossover_20.0.2-1.deb
+    sudo apt install --assume-yes --fix-broken
 } &> /dev/null &&
-printf "\r$c$b    xfce4 Installed $endc$enda\n" >&2 ||
+printf "\r$c$b    CrossOver Installed $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
-# Install xrdp
-printf "$g$b    Installing xfce4-goodies $endc$enda" >&2
+
+
+# Install OBS-Studio (Livestream)
+printf "$g$b    Installing Obs-studio $endc$enda" >&2
+{
+    sudo apt install ffmpeg -y
+    sudo add-apt-repository ppa:obsproject/obs-studio -y
+    sudo apt install obs-studio -y
+    sudo apt install --assume-yes --fix-broken
+} &> /dev/null &&
+printf "\r$c$b    OBS-Studio Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
+# Install VLC Media Player 
+printf "$g$b    Installing VLC Media Player $endc$enda" >&2
+{
+    sudo apt install vlc -y
+} &> /dev/null &&
+printf "\r$c$b    VLC Media Player Installed $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
+
+# Install apt install xrdp
+printf "$g$b    Install apt install xrdp $endc$enda" >&2
 {
     sudo apt install xrdp -y
+    sudo apt install xfce4 -y
+    sudo apt install xfce4-goodies -y
 } &> /dev/null &&
-printf "\r$c$b    xrdp Installed $endc$enda\n" >&2 ||
+printf "\r$c$b    Install apt install xrdp $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
 
 # Install other tools like nano
@@ -137,4 +164,4 @@ printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 printf "\r$c$b    JANGAN LUPA subscriber LELED CHANNEL $endc$enda\n" >&2 ||
 { printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
 
-printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2 
+printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2; >&2; exit; }
