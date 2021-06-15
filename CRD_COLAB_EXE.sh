@@ -1,7 +1,7 @@
 ! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 ! unzip ngrok-stable-linux-amd64.zip
 ! ./ngrok
-! ./ngrok authtoken 1tTgtDrLkA6ufLf4O5WCGcGIm28_49Fx6FAuPeGS7myB44tfb
+! ./ngrok authtoken 1tz0DjgxN8HDXJwoxPWS1HUyv2L_3G3c3SREQMucEgqWDan5q
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
@@ -162,8 +162,6 @@ sudo adduser user chrome-remote-desktop
 
 ! apt install xrdp -y
 ! service xrdp start -y
-! apt install firefox -y
-! apt install pciutils -y
 ! ./ngrok
 ! ./ngrok tcp 3389
 
