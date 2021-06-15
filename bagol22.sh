@@ -1,11 +1,38 @@
-#@title Start GUI Colab
-import apt, apt.debfile
-import pathlib, stat, shutil, urllib.request, subprocess, getpass, time, tempfile
-import secrets, json, re
-import IPython.utils.io
-import ipywidgets
-import os
-from IPython.display import clear_output
+#! /bin/bash
+
+# Make Instance Ready for Remote Desktop or RDP
+
+b='\033[1m'
+r='\E[31m'
+g='\E[32m'
+c='\E[36m'
+endc='\E[0m'
+enda='\033[0m'
+
+clear
+
+# Branding
+
+printf """$c$b
+ 
+██████╗░░█████╗░░██████╗░░█████╗░██╗░░░░░  ██╗░░░██╗██████╗░░██████╗
+██╔══██╗██╔══██╗██╔════╝░██╔══██╗██║░░░░░  ██║░░░██║██╔══██╗██╔════╝
+██████╦╝███████║██║░░██╗░██║░░██║██║░░░░░  ╚██╗░██╔╝██████╔╝╚█████╗░
+██╔══██╗██╔══██║██║░░╚██╗██║░░██║██║░░░░░  ░╚████╔╝░██╔═══╝░░╚═══██╗
+██████╦╝██║░░██║╚██████╔╝╚█████╔╝███████╗  ░░╚██╔╝░░██║░░░░░██████╔╝
+╚═════╝░╚═╝░░╚═╝░╚═════╝░░╚════╝░╚══════╝  ░░░╚═╝░░░╚═╝░░░░░╚═════╝░
+██╗░░██╗░█████╗░░█████╗░██╗░░██╗██╗███╗░░██╗░██████╗░
+██║░░██║██╔══██╗██╔══██╗██║░██╔╝██║████╗░██║██╔════╝░
+███████║███████║██║░░╚═╝█████═╝░██║██╔██╗██║██║░░██╗░
+██╔══██║██╔══██║██║░░██╗██╔═██╗░██║██║╚████║██║░░╚██╗
+██║░░██║██║░░██║╚█████╔╝██║░╚██╗██║██║░╚███║╚██████╔╝
+╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░╚══╝░╚═════╝░
+    $r ALFIAN ADI SUKMA $c 
+          
+$endc$enda""";
+
+
+# Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
 
 class _NoteProgress(apt.progress.base.InstallProgress, apt.progress.base.AcquireProgress, apt.progress.base.OpProgress):
   def __init__(self):
