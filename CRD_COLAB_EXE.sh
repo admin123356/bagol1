@@ -1,6 +1,6 @@
 ! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
 ! unzip ngrok-stable-linux-amd64.zip
- #Set your ngrok Authtoken.
+#! Set your ngrok Authtoken.
   ngrok_token = getpass.getpass()
   clear_output()
 
