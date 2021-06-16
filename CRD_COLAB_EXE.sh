@@ -35,11 +35,6 @@ printf """$c$b
     $r ALFIAN ADI SUKMA $c 
 $endc$enda""";
 
-# Finishing Work
-printf '\nVisit https://dashboard.ngrok.com/auth and Copy the command after authentication\n'
-! ./ngrok
-! ./ngrok authtoken 
-su - user -c """$CRP"""
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
 
