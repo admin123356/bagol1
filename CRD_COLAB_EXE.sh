@@ -47,9 +47,7 @@ then
 else
   printf "\r$r$b Error Occured $endc$enda\n" >&2
   exit
- if
-
-
+fi
 # Add user to sudo group
 sudo adduser user sudo
 
