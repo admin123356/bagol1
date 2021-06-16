@@ -1,3 +1,7 @@
+!pip install git+https://github.com/SwayamJoshi87/remocolab.xrdp.git
+import remocolab
+remocolab.setupVNC()
+
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
