@@ -1,6 +1,5 @@
 ! wget https://raw.githubusercontent.com/SwayamJoshi87/remocolab.xrdp/main/remocolab.py
-! ./remocolab.py
-! remocolab.setupVNC()
+! import remocolab.py
 
 #! /bin/bash
 
