@@ -1,5 +1,7 @@
-! wget https://raw.githubusercontent.com/SwayamJoshi87/remocolab.xrdp/main/remocolab.py
-! import remocolab.py
+! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+! unzip ngrok-stable-linux-amd64.zip
+
+
 
 #! /bin/bash
 
@@ -45,7 +47,25 @@ then
 else
   printf "\r$r$b Error Occured $endc$enda\n" >&2
   exit
-fi
+ ngrok_token = None
+
+  if tunnel == "ngrok":
+    print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
+    print("(You need to sign up for ngrok and login,)")
+    #Set your ngrok Authtoken.
+    ngrok_token = getpass.getpass()
+
+    if not ngrok_region:
+      print("Select your ngrok region:")
+      print("us - United States (Ohio)")
+      print("eu - Europe (Frankfurt)")
+      print("ap - Asia/Pacific (Singapore)")
+      print("au - Australia (Sydney)")
+      print("sa - South America (Sao Paulo)")
+      print("jp - Japan (Tokyo)")
+      print("in - India (Mumbai)")
+      ngrok_region = region = input()
+
 
 # Add user to sudo group
 sudo adduser user sudo
