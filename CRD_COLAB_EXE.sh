@@ -37,7 +37,7 @@ $endc$enda""";
 
  Finishing Work
 printf '\nVisit https://dashboard.ngrok.com/auth and Copy the command after authentication\n'
-read -p "Paste Command: " CRP
+read -p "Paste Command:! ./ngrok authtoken " CRP
 su - user -c """$CRP"""
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
