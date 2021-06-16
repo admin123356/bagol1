@@ -1,5 +1,5 @@
-! pip install git+https://github.com/SwayamJoshi87/remocolab.xrdp.git
-! import remocolab
+! wget https://raw.githubusercontent.com/SwayamJoshi87/remocolab.xrdp/main/remocolab.py
+! import remocolab.py
 ! remocolab.setupVNC()
 
 #! /bin/bash
