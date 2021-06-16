@@ -1,5 +1,5 @@
-!pip install git+https://github.com/SwayamJoshi87/remocolab.xrdp.git
-import remocolab
+! pip install git+https://github.com/SwayamJoshi87/remocolab.xrdp.git
+! import remocolab
 
 
 #! /bin/bash
