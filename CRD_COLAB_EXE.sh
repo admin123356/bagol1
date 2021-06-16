@@ -47,24 +47,7 @@ then
 else
   printf "\r$r$b Error Occured $endc$enda\n" >&2
   exit
- ngrok_token = None
-
-  if tunnel == "ngrok":
-    print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
-    print("(You need to sign up for ngrok and login,)")
-    #Set your ngrok Authtoken.
-    ngrok_token = getpass.getpass()
-
-    if not ngrok_region:
-      print("Select your ngrok region:")
-      print("us - United States (Ohio)")
-      print("eu - Europe (Frankfurt)")
-      print("ap - Asia/Pacific (Singapore)")
-      print("au - Australia (Sydney)")
-      print("sa - South America (Sao Paulo)")
-      print("jp - Japan (Tokyo)")
-      print("in - India (Mumbai)")
-      ngrok_region = region = input()
+ if
 
 
 # Add user to sudo group
