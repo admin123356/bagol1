@@ -37,6 +37,7 @@ $endc$enda""";
 
 # Finishing Work
 printf '\nVisit https://dashboard.ngrok.com/auth and Copy the command after authentication\n'
+! ./ngrok
 ! ./ngrok authtoken 
 su - user -c """$CRP"""
 
