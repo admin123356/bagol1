@@ -157,9 +157,6 @@ printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 {
 ! service xrdp start -y
 ! ./ngrok
-! ./ngrok tcp 3389
-} &> /dev/null &&
-printf "\r$c$b    JANGAN LUPA subscriber LELED CHANNEL $endc$enda\n" >&2 ||
-{ printf "\r$r$b    Error Occured $endc$enda\n" >&2; exit; }
 
-printf "\n$g$b    Installation Completed $endc$enda\n\n" >&2; >&2; exit; }
+#Create tunnel
+get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 3389 &')
