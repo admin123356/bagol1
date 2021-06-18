@@ -1,9 +1,3 @@
-! wget -q -c -nc https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-! unzip -qq -n ngrok-stable-linux-amd64.zip
-import getpass
-print("Copy authtoken from https://dashboard.ngrok.com/auth")
-authtoken = getpass.getpass()
-
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
