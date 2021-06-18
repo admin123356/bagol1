@@ -157,6 +157,4 @@ printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 {
 ! service xrdp start -y
 ! ./ngrok
-
-#Create tunnel
-get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 3389 &')
+! ./ngrok tcp 3389
