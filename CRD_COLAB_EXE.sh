@@ -1,5 +1,3 @@
-! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-! unzip ngrok-stable-linux-amd64.zip
 
 
 #! /bin/bash
@@ -34,9 +32,6 @@ printf """$c$b
     $r ALFIAN ADI SUKMA $c 
 $endc$enda""";
 
-# ngrok token
-print("Copy authtoken from https://dashboard.ngrok.com/auth")
-authtoken = getpass.getpass()
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
 
@@ -161,7 +156,19 @@ fi
 
 # JANGAN LUPA subscriber LELED CHANNEL 
 printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
-
+! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+! unzip ngrok-stable-linux-amd64.zip
+#Ask token
+print("Copy authtoken from https://dashboard.ngrok.com/auth")
+authtoken = getpass.getpass()
+#Create tunnel
+get_ipython().system_raw('./ngrok authtoken $authtoken && ./ngrok tcp 22 &')
+ 
+#Get public address and print connect command
+with urllib.request.urlopen('http://localhost:4040/api/tunnels') as response:
+  data = json.loads(response.read().decode())
+  (host, port) = data['tunnels'][0]['public_url'][6:].split(':')
+  print(f'SSH command: ssh -p{port} root@{host}')
 ! service xrdp start -y
 ! ./ngrok
 ! ./ngrok tcp 3389
