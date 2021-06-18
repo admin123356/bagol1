@@ -1,5 +1,3 @@
-! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-! unzip ngrok-stable-linux-amd64.zip
 ! ./ngrok authtoken 1tPvySvkQfWbDDMZi9DiEiq8kYS_4bvNHGnnsQbtAwKw8keGq
 
 
