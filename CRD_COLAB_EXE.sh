@@ -1,6 +1,3 @@
-! ./ngrok authtoken 1tPvySvkQfWbDDMZi9DiEiq8kYS_4bvNHGnnsQbtAwKw8keGq
-
-
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
