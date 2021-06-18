@@ -1,3 +1,7 @@
+! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+! unzip ngrok-stable-linux-amd64.zip
+
+
 #! /bin/bash
 
 # Make Instance Ready for Remote Desktop or RDP
@@ -30,6 +34,9 @@ printf """$c$b
     $r ALFIAN ADI SUKMA $c 
 $endc$enda""";
 
+# ngrok token
+print("Copy authtoken from https://dashboard.ngrok.com/auth")
+authtoken = getpass.getpass()
 
 # Used Two if else type statements, one is simple second is complex. So, don't get confused or fear by seeing complex if else statement '^^.
 
@@ -154,7 +161,7 @@ fi
 
 # JANGAN LUPA subscriber LELED CHANNEL 
 printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
-{
+
 ! service xrdp start -y
 ! ./ngrok
 ! ./ngrok tcp 3389
