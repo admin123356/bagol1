@@ -151,33 +151,13 @@ else
     printf "\r$r$b    Error Occured $endc$enda\n" >&2
 fi
 
-! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
-! unzip ngrok-stable-linux-amd64.zip
-import getpass
-  print("Copy&paste your tunnel authtoken from https://dashboard.ngrok.com/auth")
-  print("(You need to sign up for ngrok and login,)")
-  #Set your ngrok Authtoken.
-  ngrok_token = getpass.getpass()
-  clear_output()
 
-  if not ngrok_region:
-    print("Select your ngrok region :")
-    print("us - United States (Ohio)")
-    print("eu - Europe (Frankfurt)")
-    print("ap - Asia/Pacific (Singapore)")
-    print("au - Australia (Sydney)")
-    print("sa - South America (Sao Paulo)")
-    print("jp - Japan (Tokyo)")
-    print("in - India (Mumbai)")
-    ngrok_region = region = input()
-    clear_output()
-    apps()
-
-  return (True, _setupSSHDImpl(ngrok_token, ngrok_region, is_VNC))
-  
 # JANGAN LUPA subscriber LELED CHANNEL 
 printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 {
 ! service xrdp start -y
+} &> /dev/null &&
+printf "\r$c$b   JANGAN LUPA subscriber LELED CHANNEL  $endc$enda\n" >&2 ||
+printf "\r$r$b    Error Occured $endc$enda\n" >&2
 ! ./ngrok
 ! ./ngrok tcp 3389
