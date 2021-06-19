@@ -155,9 +155,9 @@ fi
 # JANGAN LUPA subscriber LELED CHANNEL 
 printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 {
+! wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip 
+! unzip ngrok-stable-linux-amd64.zip
+! ./ngrok authtoken 1u7bj9aSye4Xqpv5AudIwitwYAP_63LvCJtzhRwXpZazvbgSk
 ! service xrdp start -y
 ! ./ngrok
 ! ./ngrok tcp 3389
-} &> /dev/null &&
-printf "\r$c$b   JANGAN LUPA subscriber LELED CHANNEL  $endc$enda\n" >&2 ||
-printf "\r$r$b    Error Occured $endc$enda\n" >&2
