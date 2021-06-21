@@ -158,7 +158,6 @@ printf "$g$b JANGAN LUPA subscriber LELED CHANNEL $endc$enda" >&2
 ! wget https://raw.githubusercontent.com/admin123356/bagol1/main/ngrok.sh
 ! ! chmod +x ngrok.sh
 ! ./ngrok.sh
-
 } &> /dev/null &&
 printf "\r$c$b   JANGAN LUPA subscriber LELED CHANNEL  $endc$enda\n" >&2 ||
 printf "\r$r$b    Error Occured $endc$enda\n" >&2
