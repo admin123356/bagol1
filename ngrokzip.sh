@@ -1,4 +1,19 @@
+#! /bin/bash
 
+# Make Instance Ready for Remote Desktop or RDP
+
+b='\033[1m'
+r='\E[31m'
+g='\E[32m'
+c='\E[36m'
+endc='\E[0m'
+enda='\033[0m'
+
+clear
+
+# Branding
+
+printf """$c$b
 # PAKAI LAH DENGAN BIJAK
 printf "\n$g$b    PAKAI LAH DENGAN BIJAK $endc$enda" >&2
 {
